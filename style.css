@@ -28,19 +28,28 @@ body{
     padding: 15px;
     display: block;
     text-align: center;
+ 
     
 }
 
 /* Color al seleccionar una opcion de la navegacion*/
 .navbar a:hover{
+    transform: scale(1.5); /* Escala el elemento al 110% del tamaño original */
+}
+
+/* Color al seleccionar una opcion de la navegacion*/
+.navbar li:hover{
     background-color: hsl(352, 64%, 36%);
 }
 
 
-
 .navbar li{
     float: left;
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
 }
+
+
+
 
 
 
@@ -114,4 +123,42 @@ button{
 
 
 
+/* Elementos de Feedback.html*/
 
+#h1Texto{
+
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+}
+
+#h4Texto{
+
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+
+}
+
+
+
+
+/* Animación de carga */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Estilos para el ícono de carga */
+  .loading-icon {
+    width: 610px;
+    height: 610px;
+    border: 100px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin-left: 500px;
+    border-top-color: #3498db;
+    animation: spin 1s linear infinite; /* Aplicar la animación de rotación */
+  }
+  

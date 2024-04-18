@@ -88,3 +88,18 @@ function cancelarCompra() {
     const metodoPago = document.getElementById("metodo-pago");
     metodoPago.style.display = "none";
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Mostrar la animación de carga al navegar
+    const loader = document.getElementById("loader");
+    loader.style.display = "block";
+  
+    // Ocultar la animación de carga después de un retraso
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        loader.style.display = "none";
+      }, 1000); // Retraso de 3 segundos (igual a la duración de la animación)
+    });
+  });
+  
